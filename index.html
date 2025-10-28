@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./style.css" />
+  <script type="module" src="./script.js"></script>
+</head>
+<body>
+  <main class="app">
+    <section class="calculator" aria-label="Calculadora">
+
+      <div class="display-wrap">
+        <output
+          id="display"
+          class="display"
+          aria-live="polite"
+          aria-label="Visor da calculadora (10 posições)"
+          data-testid="display"
+        >0</output>
+      </div>
+
+      <div class="keys" aria-label="Teclado da calculadora">
+        <!-- ...existing code... -->
+        <button id="clear" class="key key-func" data-action="clear" aria-label="Limpar" data-testid="key-clear">C</button>
+        <button id="backspace" class="key key-func" data-action="backspace" aria-label="Apagar último dígito" data-testid="key-backspace">&#x232B;</button>
+        <button class="key key-func" data-action="sign" aria-label="Alternar sinal" data-testid="key-sign">&plusmn;</button>
+        <button id="percent" class="key key-op" data-op="percent" aria-label="Porcentagem" data-testid="key-percent">&percnt;</button>
+
+        <button id="seven" class="key" data-digit="7" data-testid="key-7">7</button>
+        <button id="eight" class="key" data-digit="8" data-testid="key-8">8</button>
+        <button id="nine" class="key" data-digit="9" data-testid="key-9">9</button>
+        <button id="divide" class="key key-op" data-op="divide" aria-label="Dividir" data-testid="key-divide">&divide;</button>
+
+        <button id="four" class="key" data-digit="4" data-testid="key-4">4</button>
+        <button id="five" class="key" data-digit="5" data-testid="key-5">5</button>
+        <button id="six" class="key" data-digit="6" data-testid="key-6">6</button>
+        <button id="multiply" class="key key-op" data-op="multiply" aria-label="Multiplicar" data-testid="key-multiply">&times;</button>
+
+        <button id="one" class="key" data-digit="1" data-testid="key-1">1</button>
+        <button id="two" class="key" data-digit="2" data-testid="key-2">2</button>
+        <button id="three" class="key" data-digit="3" data-testid="key-3">3</button>
+        <button id="subtract" class="key key-op" data-op="subtract" aria-label="Subtrair" data-testid="key-subtract">&minus;</button>
+
+        <button id="zero" class="key" data-digit="0" data-testid="key-0">0</button>
+        <button id="decimal" class="key" data-digit="." aria-label="Vírgula decimal" data-testid="key-dot">&period;</button>
+        <button id="sqrt" class="key key-op" data-op="sqrt" aria-label="Raiz quadrada" data-testid="key-sqrt">&Sqrt;</button>
+        <button id="add" class="key key-op" data-op="add" aria-label="Somar" data-testid="key-add">&plus;</button>
+
+        <button class="key key-op span-2" data-op="power" aria-label="Potenciação" data-testid="key-power">x<sup>y</sup></button>
+        <button id="equals" class="key key-equal span-2" data-action="equals" aria-label="Igual" data-testid="key-equals">&equals;</button>
+      </div>
+    </section>
+
+    <aside class="history" aria-label="Histórico de operações">
+      <header class="history__header">
+        <h2>Histórico</h2>
+        <button class="history__clear" data-action="history-clear" aria-label="Limpar histórico" data-testid="history-clear">Limpar</button>
+      </header>
+
+      <ol id="history-list" class="history__list" reversed data-testid="history-list">
+      </ol>
+    </aside>
+  </main>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
