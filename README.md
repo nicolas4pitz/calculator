@@ -1,4 +1,4 @@
-# Random Quote Machine
+# Simple Calculator
 
 A simple calculator
 
